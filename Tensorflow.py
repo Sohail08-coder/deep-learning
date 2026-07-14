@@ -22,7 +22,7 @@ model.compile( loss='mse' ,
 #Train
 model.fit(x,
           y,
-          epochs=30)
+          epochs=300)
 loss = model.evaluate(x,y)
 print(loss)
     
