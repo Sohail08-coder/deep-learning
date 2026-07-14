@@ -16,12 +16,15 @@ model.summary()
 
 #compile
 model.compile( loss='mse' , 
-     optimizer=keras.optimizers.SGD(learning_rate=0.1))
+     optimizer=keras.optimizers.SGD(learning_rate=0.1),
+     metrics=['accuracy'])
 
 #Train
 model.fit(x,
           y,
-          epochs=3000)
+          epochs=30)
+loss = model.evaluate(x,y)
+print(loss)
     
     
     
